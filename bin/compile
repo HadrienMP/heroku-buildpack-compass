@@ -7,6 +7,8 @@ indent() {
 buildDir=$(cd "$1/" && pwd)
 cacheDir=$(cd "$2/" && pwd)
 
+PATH=$PATH:/app/.gem/ruby/2.7.0/bin
+
 echo "Downloading compass" | indent
 gem install --user-install compass | indent
 
