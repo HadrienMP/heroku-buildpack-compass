@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -f $1/config.rb ]; then
+    echo "Compass"
+    exit 0
+fi
+exit 1

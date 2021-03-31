@@ -1,0 +1,16 @@
+#!/bin/bash
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+buildDir=$(cd "$1/" && pwd)
+cacheDir=$(cd "$2/" && pwd)
+
+echo "Downloading compass" | indent
+gem install compass | indent
+
+echo "-----> Compass compile"
+cd $buildDir
+compass compile | indent
+
