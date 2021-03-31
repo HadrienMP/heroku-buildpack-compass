@@ -8,7 +8,7 @@ buildDir=$(cd "$1/" && pwd)
 cacheDir=$(cd "$2/" && pwd)
 
 echo "Downloading compass" | indent
-gem install compass | indent
+gem install --user-install compass | indent
 
 echo "-----> Compass compile"
 cd $buildDir
